@@ -1,0 +1,23 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#post}}
+        <tr>
+            <th>{{id}}</th>
+            <td>{{title}}</td>
+            <td>{{content}}</td>
+        </tr>
+    {{/post}}
+    </tbody>
+</table>
+<a href="/post/{{post.id}}/edit" class="btn btn-primary">Edit</a>
+<a href="/post/{{post.id}}/delete" class="btn btn-danger">Delete</a>
+<button type="button" class="btn btn-secondary"><a href="/post" style="color: aliceblue">Go to PostList</a></button>
+{{>layouts/footer}}

@@ -1,0 +1,21 @@
+{{>layouts/header}}
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Title</th>
+        <th scope="col">Content</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#postList}}
+        <tr>
+            <th>{{id}}</th>
+            <td><a href="/post/{{id}}">{{title}}</a></td>
+            <td>{{content}}</td>
+        </tr>
+    {{/postList}}
+    </tbody>
+</table>
+<button type="button" class="btn btn-secondary"><a href="/post/newpost" style="color: aliceblue">New Article</a></button>
+{{>layouts/footer}}s
